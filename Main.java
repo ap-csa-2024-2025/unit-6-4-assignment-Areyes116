@@ -28,8 +28,10 @@ public class Main
   public static int countLength(String[] arr, int targetLength)
   {
     int count = 0;
-    for (String s : arr) {
-        if (s.length() == targetLength) {
+    for (String s : arr)
+    {
+        if (s.length() == targetLength)
+        {
             count++;
         }
     }
@@ -39,8 +41,10 @@ public class Main
   // indexOf: Returns the index of the first occurrence of the target in a double array
   public static int indexOf(double[] arr, double target)
   {
-    for (int i = 0; i < arr.length; i++) {
-        if (arr[i] == target) {
+    for (int i = 0; i < arr.length; i++)
+    {
+        if (arr[i] == target)
+        {
             return i;
         }
     }
@@ -50,9 +54,12 @@ public class Main
   // hasDuplicates: Returns true if there are duplicates in the integer array
   public static boolean hasDuplicates(int[] arr)
   {
-    for (int i = 0; i < arr.length; i++) {
-        for (int j = i + 1; j < arr.length; j++) {
-            if (arr[i] == arr[j]) {
+    for (int i = 0; i < arr.length; i++)
+    {
+        for (int j = i + 1; j < arr.length; j++)
+        {
+            if (arr[i] == arr[j])
+            {
                 return true;
             }
         }
@@ -67,14 +74,17 @@ public class Main
     
     Map<String, Integer> frequencyMap = new HashMap<>();
     
-    for (String s : arr) {
+    for (String s : arr)
+    {
         frequencyMap.put(s, frequencyMap.getOrDefault(s, 0) + 1);
     }
 
     String mode = null;
     int maxFrequency = 0;
-    for (Map.Entry<String, Integer> entry : frequencyMap.entrySet()) {
-        if (entry.getValue() > maxFrequency) {
+    for (Map.Entry<String, Integer> entry : frequencyMap.entrySet())
+    {
+        if (entry.getValue() > maxFrequency)
+        {
             maxFrequency = entry.getValue();
             mode = entry.getKey();
         }
